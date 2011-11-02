@@ -66,4 +66,4 @@ Inside of a delegated method, `this` is a reference to the element for which the
 		// You also have a reference to the original event, useful for mouse and keyboard events, etc.
 	}
 
-That's pretty much it. There are advantages and disadvantages to using this technique, so please evaluate your situation before using a delegation system like this.
+That's pretty much it. There are advantages and disadvantages to using this technique, so please evaluate your situation before using a delegation system like this. Thanks.

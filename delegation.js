@@ -9,6 +9,8 @@
 /*jshint curly: true, eqeqeq: true, noarg: true, undef: true, strict: true */
 
 (function ( ns ) {
+	"use strict";
+	
 	if ( !ns ) {
 		return;
 	}

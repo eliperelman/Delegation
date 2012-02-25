@@ -11,9 +11,7 @@
 (function ( ns ) {
 	"use strict";
 	
-	if ( !ns ) {
-		return;
-	}
+	ns || ( ns = { actions: { } } );
 	
 	// This is the master delegate function. This method will execute every
 	// time that a delegated event is triggered (e.g. click, dblclick, etc.).
@@ -37,7 +35,9 @@
 		// event.
 		while ( element && element.getAttribute ) {
 			if ( ( attrValue = element.getAttribute( attrName ) ) && ( events = attrValue.split( ' ' ) ).length ) {
-				for ( i = 0, il = events.length, expression = actions[ events[ i ] ]; i < il; i++ ) {
+				for ( i = 0, il = events.length; i < il; i++ ) {
+					expression = actions[ events[ i ] ]
+					
 					// Execute the expression. If the expression explicitly returns false,
 					// quit walking up the DOM tree and exit.
 					if ( typeof expression === 'function' && expression.call( element, e ) === false ) {
